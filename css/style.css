@@ -4,6 +4,34 @@ body {
     font-family: 'Lato', 'Jersey' sans-serif; 
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
 
+.main-content {
+    background-color: rgb(150, 139, 139);
+    width: 80%;
+    height: auto;
+}
 
+.main-img img {
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+}
 
+.right-content {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.shopping-cart {
+    display: flex;
+    justify-content: center;margin-top: 20px;
+}
+
+.shopping-cart h3 {
+    font-family: jersey;
+}

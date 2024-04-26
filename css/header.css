@@ -32,14 +32,13 @@ header {
     box-shadow: 2px 2px 3px 4px rgba(211, 195, 195, 0.66);
 }
 
+
 h1 {
-    font-family: jersey;
-    
+    font-family: jersey;    
 }
 
-h3 {
+h5 {
+    text-align: center;
     font-family: jersey;
-    text-decoration: underline;
-    
-
+    font-weight: 300;
 }
