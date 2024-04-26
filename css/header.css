@@ -1,0 +1,32 @@
+header {
+    height: 100px;
+    background-color: rgb(221, 147, 10);
+    background: linear-gradient(to right, rgb(221, 147, 10) 20%, rgba(198, 6, 22, 0.836) 80%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon-headline {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-headline img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.german-icon  {
+    height: 30px;
+    width: auto;
+    border-radius: 30%;
+    cursor: pointer;
+}
+
+.german-icon:hover {
+    box-shadow: 2px 2px 3px 4px rgba(211, 195, 195, 0.66);
+}
