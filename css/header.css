@@ -42,3 +42,15 @@ h5 {
     font-family: jersey;
     font-weight: 300;
 }
+
+@media (max-width: 800px) {
+    h5 {
+        display: none;
+    }
+    .german-icon {
+        display: none;
+    }
+    header {
+        justify-content: center;
+    }
+}

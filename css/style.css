@@ -15,16 +15,28 @@ body {
     height: auto;
 }
 
+@media (max-width: 800px) {
+    .main-content {
+        width: 70%;
+    }
+}
+
 .main-img img {
    width: 100%;
-   height: 200px;
-   object-fit: cover;
+   height: 20vh;
+   object-fit: none;
 }
 
 .right-content {
     display: flex;
     flex-direction: column;
     width: 20%;
+}
+
+@media (max-width: 800px) {
+    .right-content {
+        width: 27%;
+    }
 }
 
 .shopping-cart {
@@ -34,4 +46,18 @@ body {
 
 .shopping-cart h3 {
     font-family: jersey;
+}
+
+.restaurant-logo {
+    position: absolute;
+    border: 2px solid black;
+    top: 220px;
+    left: 220px;
+    border-radius: 40%;
+    
+}
+
+.restaurant-logo img {
+    width: 80px;
+    height: 80px;
 }
