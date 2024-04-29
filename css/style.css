@@ -4,13 +4,19 @@ body {
     font-family: 'Lato', 'Jersey' sans-serif; 
 }
 
+.page-wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
 .wrapper {
     display: flex;
     flex-direction: row;
 }
 
 .main-content {
-    background-color: rgb(150, 139, 139);
+    background-color: rgb(250, 246, 246);
     width: 80%;
     height: auto;
 }
@@ -49,15 +55,70 @@ body {
 }
 
 .restaurant-logo {
+    background-color: rgb(255 255 255 / 49%);
     position: absolute;
     border: 2px solid black;
-    top: 220px;
-    left: 220px;
-    border-radius: 40%;
+    top: 24%;
+    left: 42%;
+    border-radius: 50%;
     
 }
 
 .restaurant-logo img {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
+}
+
+.head-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 52px;
+    padding: 8px;
+}
+
+.hl-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+}
+
+.review img {
+    height: 62px;
+}
+
+.hl-left h1 {
+    margin: 0;
+}
+
+.info-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: ;
+}
+
+.heart img {
+    width: 50px;
+}
+
+.info img {
+    width: 90px;
+}
+
+@media(max-width: 800px) {
+    .restaurant-logo {
+        display: none;
+    }
+    .info-content {
+        display: none;
+    }
+}@media(max-width: 500px) {
+    .review {
+        display: none;
+    }
 }
