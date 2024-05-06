@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     box-sizing: border-box;
@@ -5,43 +9,57 @@ body {
 }
 
 .page-wrapper {
-    max-width: 1600px;
+    max-width: 2200px;
     margin: 0 auto;
-    border: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .wrapper {
     display: flex;
-    flex-direction: row;
+}
+
+@media(max-width: 900px) {
+    .wrapper {
+        flex-direction: column;
+    }
 }
 
 .main-content {
-    background-color: rgb(250, 246, 246);
-    width: 80%;
-    height: auto;
+    background-color: rgba(250, 246, 246, 0.255);
+    width: 75%;
+    border-right: 1px solid lightgrey;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .main-content {
-        width: 70%;
+        width: 100%;
+        float: none;
     }
 }
 
 .main-img img {
-   width: 100%;
-   height: 20vh;
-   object-fit: none;
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
 }
 
 .right-content {
     display: flex;
     flex-direction: column;
-    width: 20%;
+    flex-grow: 1;
+    position: sticky;
+    height: max-content;
+    top: 0;
 }
 
-@media (max-width: 800px) {
+
+@media (max-width: 900px) {
     .right-content {
-        width: 27%;
+        background-color: white;
+        position: sticky;
+        bottom: 0;
     }
 }
 
@@ -58,15 +76,15 @@ body {
     background-color: rgb(255 255 255 / 49%);
     position: absolute;
     border: 2px solid black;
-    top: 24%;
-    left: 42%;
+    top: 23%;
+    left: 40%;
     border-radius: 50%;
     
 }
 
 .restaurant-logo img {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: auto;
 }
 
 .head-content {
@@ -80,6 +98,7 @@ body {
 .hl-left {
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .review {
@@ -103,14 +122,14 @@ body {
 }
 
 .heart img {
-    width: 50px;
+    width: 40px;
 }
 
 .info img {
-    width: 90px;
+    width: 75px;
 }
 
-@media(max-width: 800px) {
+@media(max-width: 900px) {
     .restaurant-logo {
         display: none;
     }
@@ -122,3 +141,194 @@ body {
         display: none;
     }
 }
+
+.underline {
+    height: 1px;
+    background-color: rgba(163, 154, 154, 0.603);
+    margin-bottom: 10px;
+}
+
+.menuRow {
+    margin-left: 10px;
+    display: grid;
+    gap: var(--size-3);
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+.menuRow img {
+    width: 26px;
+}
+
+.menuRow a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+}
+
+a:hover {
+    color: rgb(241,140,8);
+}
+
+.dishes {
+    padding: 8px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+}
+
+.cardLeft {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    margin-bottom: 8px;
+    gap: 12px;
+    margin-left: 16px;
+}
+
+.cardHead {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cardHead h2 {
+    font-family: jersey;
+}
+
+.cardHead span {
+    font-size: 12px;
+    color: rgb(241,140,8);
+}
+
+.price {
+    color: rgb(241,140,8);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.addBorder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 22px;
+    width: auto;
+    border-left: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    cursor: pointer;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;padding: 16px;
+    gap: 16px;
+}
+
+.basketImageBox {
+    display: flex;
+    gap: 4px;
+}
+
+.basketImageBox img {
+    width: 20px;
+    padding: 4px;
+    display: flex;
+}
+
+.basketItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    gap: 4px;
+    padding: 4px;
+    font-weight: bold;
+}
+
+.counter {
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.counterButton img {
+    border: 2px solid lightgrey;
+}
+
+.oName {
+    width: 30%;
+    font-size: 12px;
+}
+
+.basketSinglePrice {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 15%;
+}
+
+.trashImg {
+    width: 12px;
+}
+
+.sum {
+    padding: 10px;
+}
+
+.basketSeperator {
+    width: 75%;
+    margin: 34px;
+}
+
+@media(max-width: 900px) {
+    .basketSeperator {
+        width: 100%;
+        margin: 0;
+    }
+
+    .billMenu {
+        justify-content: space-around;
+    }
+}
+
+.bill {
+    padding: 16px;
+}
+
+.billMenu {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.billMenuBolder {
+    font-weight: bolder;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: green;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: rgb(7, 175, 7);
+    color: white;
+}
+
+

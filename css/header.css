@@ -1,4 +1,5 @@
 header {
+    width: 100%;
     height: 100px;
     background-color: rgb(221, 147, 10);
     background: linear-gradient(to right, rgb(221, 147, 10) 20%, rgb(241, 140, 8) 80%);
@@ -29,7 +30,7 @@ header {
 }
 
 .german-icon:hover {
-    box-shadow: 2px 2px 3px 4px rgba(211, 195, 195, 0.66);
+    box-shadow: 2px 2px 3px 4px rgba(187, 79, 7, 0.89);
 }
 
 
@@ -43,7 +44,7 @@ h5 {
     font-weight: 300;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     h5 {
         display: none;
     }

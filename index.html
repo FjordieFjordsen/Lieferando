@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="script.js"></script>
     <title>Lieferando</title>
@@ -28,13 +29,14 @@
             </div>
         </header>
     
+        
         <div class="wrapper">
             <div class="main-content">
                 <div class="main-img">
                     <img src="img/pizza.jpg">
                 </div>
                 <div class="restaurant-logo">
-                    <img src="img/thym.png">
+                    <img src="img/thymian2.png">
                 </div>
     
                 <div class="head-content">
@@ -55,14 +57,157 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="underline"></div>
+
+                <div class="menuRow">
+                    <img src="img/search.png">
+                    <a href="#dishesSalad" class="dishes">Salat</a>
+                    <a href="#dishesFish" class="dishes">Fisch</a>
+                    <a href="#dishesVegan" class="dishes">Vegan</a>
+                </div>
+
+                <div id="dishesSalad" class="dishes">
+
+                    <span onclick="addToBasket(0)" class="card">
+                        <div class="addBorder">
+                            <img src="img/plus.png">
+                        </div> 
+                        <div class="cardLeft">
+                            <div class="cardHead">
+                                <h2 id="name">Garten Salat</h2>
+                                <span>Produktinfo</span>
+                            </div>
+                            <span>Salat aus dem Kräutergarten mit Schafskäse und Vinaigrette</span>
+                            <span id="price" class="price">8.00 €</span>                           
+                        </div>
+                    </span>
+
+                    <span onclick="addToBasket(1)"class="card">
+                        <div class="addBorder">
+                            <img src="img/plus.png">
+                        </div> 
+                        <div class="cardLeft">
+                            <div class="cardHead">
+                                <h2 id="name">Salat Thunfisch</h2>
+                                <span>Produktinfo</span>
+                            </div>
+                            <span>Gemischter Salat mit Thunfisch, Oliven, gekochtem Ei und Vinaigrette</span>
+                            <span id="price" class="price">12.00 €</span>                           
+                        </div>
+                    </span>
+                    
+                </div>
+
+                <div id="dishesFish" class="dishes">
+
+                    <span onclick="addToBasket(2)" class="card">
+                        <div class="addBorder">
+                            <img src="img/plus.png">
+                        </div> 
+                        <div class="cardLeft">
+                            <div class="cardHead">
+                                <h2 id="name">Lachs Gegrillt</h2>
+                                <span>Produktinfo</span>
+                            </div>
+                            <span>gegrillter Wildlachs mit Blattspinat, Safran - Soße und Reis</span>
+                            <span id="price" class="price">24.00 €</span>                           
+                        </div>
+                    </span>
+
+                    <span onclick="addToBasket(3)"class="card">
+                        <div class="addBorder">
+                            <img src="img/plus.png">
+                        </div> 
+                        <div class="cardLeft">
+                            <div class="cardHead">
+                                <h2 id="name">Dorade Gefüllt</h2>
+                                <span>Produktinfo</span>
+                            </div>
+                            <span>gegrillte Dorade, gefüllt mit Thymian & Limette. Salat und Baguette</span>
+                            <span id="price" class="price">26.00 €</span>                           
+                        </div>
+                    </span>
+                    
+                </div>
+
+                <div id="dishesVegan" class="dishes">
+
+                    <span onclick="addToBasket(4)" class="card">
+                        <div class="addBorder">
+                            <img src="img/plus.png">
+                        </div> 
+                        <div class="cardLeft">
+                            <div class="cardHead">
+                                <h2 id="name">Ratatouille</h2>
+                                <span>Produktinfo</span>
+                            </div>
+                            <span>tomatisiert, geschmortes Gemüse mit Thymian & Rosmarin. Baguette</span>
+                            <span id="price" class="price">14.00 €</span>                           
+                        </div>
+                    </span>
+
+                    <span onclick="addToBasket(5)"class="card">
+                        <div class="addBorder">
+                            <img src="img/plus.png">
+                        </div> 
+                        <div class="cardLeft">
+                            <div class="cardHead">
+                                <h2 id="name">Auberginen Gebacken</h2>
+                                <span>Produktinfo</span>
+                            </div>
+                            <span>im Ofen gebackene Auberginen mit Bulgursalat</span>
+                            <span id="price" class="price">16.00 €</span>                           
+                        </div>
+                    </span>
+                    
+                </div>
             </div>
     
             <div class="right-content">
                 <div class="shopping-cart">
                     <h3>Warenkorb</h3>
                 </div>
+                <div id="list" class="list">
+                    
+                </div>
+
+                <div id="sum" class="sum">
+                    <hr class="basketSeperator">
+                    <div id="bill" class="bill">
+                        <div class="billMenu">
+                            <p>Zwischensumme</p>
+                            <p>0.00 €</p>
+                        </div>
+                        <div class="billMenu">
+                            <p>Lieferkosten</p>
+                            <p>2.00 €</p>
+                        </div>
+                        <div class="billMenu bolder">
+                            <p>Gesamt</p>
+                            <p>2.00 €</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" onclick="done()" id="wech" class="button">Bestellung abschicken</a>
             </div>
         </div>
+            
+
+        <footer class="footer" id="footer">
+            <h3 class="footer-left">LieferAn.de</h3>
+            <div class="imp">
+                <h5>©2024</h5>
+                <h5> |Impressum</h5>
+            </div>
+            
+            <div class="icon-box">
+                <img class="icons" src="img/tripad.png" alt="">
+                <img class="icons" src="img/facebook.png" alt="">
+                <img class="icons" src="img/insta.png" alt="">
+            </div>
+        </footer>
     
         
         
@@ -70,6 +215,5 @@
         
     </div>
 
-   
 </body>
 </html>
